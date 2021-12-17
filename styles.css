@@ -1,0 +1,896 @@
+/* 
+
+--------------------------
+
+ESTILOS COMUNES
+
+--------------------------
+
+*/
+
+* {
+	font-family: Raleway, sans-serif;
+	
+}
+
+html {
+	background: #f9f9f9;
+	font-size: 10px;
+
+}
+
+body {		
+		margin: 1em ;
+		position: relative;
+		min-height: 100vh;
+		 	
+	}	
+
+h1 {		
+		font: 3rem Caveat, sans-serif;
+		display: inline;
+	}
+
+a:link,
+a:visited {
+
+	color: #333;
+}
+
+ 
+.img-galeria:hover {
+    filter: drop-shadow(0px 0px 15px rgb(0 0 0 / 100%)) grayscale(50%);
+    transition: filter 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);    
+    cursor: pointer;   
+}
+
+.menu-item:nth-child(2) {
+	position: relative;
+}
+
+
+
+.obra-submenu-container {
+	display: flex ;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	top: 63px;
+	left:-31px;
+	padding: 0 20px;
+	background: #f9f9f9;
+	height: 0;
+	overflow: hidden;
+	box-shadow: 0 30px 20px rgb(0 0 0 / 50%);
+	border-radius: 0 0 8px 8px;
+	transition: height 0.3s cubic-bezier(.25,.46,.45,.94);
+}
+
+
+/*
+
+MODAL IMG
+
+*/
+
+#modal {
+	display: none; 
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/* flex-wrap: wrap; */
+	z-index: 3000;
+	padding: 50px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: none;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0, 0.9);
+}
+
+
+#modal__epigrafe {
+	padding-top: 20px;
+	color:#f1f1f1;
+	font-size: 1.4rem;
+}
+#modal__img, #modal__epigrafe {
+	animation-name: zoom;
+	animation-duration: 0.3s;
+	}
+
+@keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+#modal__btnCerrar {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+#modal__btnCerrar:hover,
+#modal__btnCerrar:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+
+}
+
+.vertical {
+	height: 90%;
+}
+
+.alto-200 {
+	height: 200px;
+}
+
+.alto-160 {
+	height: 160px;
+}
+
+/*----------------------------*/
+
+
+footer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+
+	background: #f3f3f3;
+	border-top: 1px solid #e9e9e9;
+    padding: 20px 0;
+	justify-items: center;
+	align-items:center;
+
+	position: absolute;	
+	bottom: 0;
+	width: 100%;	
+	height: 15em;
+	
+}
+
+footer .fab {
+	font-size: 5rem;
+}
+
+
+.copyright {
+	margin: 10px 10px;
+	font-size: 1.3rem;
+	
+}
+
+.developed {	
+	margin: 10px 10px;
+	font-size: 1.3rem;
+	
+}
+
+/* 
+##contacto.html 
+DESKTOP
+*/
+
+.form-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	font-size:1.6rem;
+	margin-top: 50px;
+}
+
+.form-container__form {
+	width: 50%;
+	height: 60%;
+	border-radius: 15px;
+	padding: 40px 80px;
+	box-shadow: 0 0 50px rgba(0 0 0 / 23%);
+	background-color: #f6f6f6;
+}
+
+.form-container__form__input {
+	border: none;
+	display: block;
+	margin: 20px 0;
+	width: 100%;
+	padding: 10px;
+	border-bottom: 1px solid #f9f9f9;
+	border-radius: 5px;
+}
+
+.form-container__form__input:focus-visible {
+	outline: none;
+	border-bottom: 1px solid #a5a5a5;
+	box-shadow: 5px 10px 20px rgba(0 0 0 / 15%);
+	transition: border-bottom 0.5s ease-out, box-shadow 0.5s ease-out;
+}
+
+#message {
+	max-width: 100%;
+	resize: none;
+	overflow: auto;
+}
+.form-container__form__input[type="submit"] {
+	background-color: #e4e4e4;
+}
+.form-container__form__input[type="submit"]:hover {
+	cursor: pointer;
+	
+	background: radial-gradient(circle, rgba(232,232,232,1) 0%, rgba(191,191,191,1) 100%);
+	transition: background 1s ease-out;
+
+}
+
+.invalid {
+	border: 1px solid #a30000;
+}
+
+.alert {
+	font-size: 1.5rem;
+	font-style: italic;
+	color: red;
+}
+
+
+
+/* 
+
+-------------------------- 
+
+ESTILOS MOBILE
+
+--------------------------
+
+*/
+
+
+@media screen and (max-width: 700px) {
+
+	body {		
+		margin: 0 auto;
+	}	
+
+	header {		
+		box-shadow: 0 14px 20px rgb(0 0 0 / 5%);
+		height: 62.1677px;
+		position:sticky;
+		top: 0;
+		z-index: 2000;
+	}
+
+	#nav-container-mobile {
+		display: flex;	
+		position: fixed;
+		top:0;		
+		background-color: #f9f9f9;		
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		/*margin: 0 1.5em;*/
+		padding: 0 1.5rem;
+	}	
+
+
+	#btn-hamburger {
+		font-size: 2rem;
+		background: #f9f9f9;		
+		border: 1px solid rgb(0 0 0 / 15%);
+		padding: 6px 8px;
+		border-radius: 5px;
+	}
+	
+	#menu-colapsable {
+		box-shadow: inset 0 -30px 20px rgb(0 0 0 / 5%), 
+					inset 0 14px 20px rgb(0 0 0 / 5%);
+		display: flex;
+		position: absolute;
+		top: 76px;
+		left: 0;
+		z-index: 1000;		
+		width: 100%;
+		background: #f9f9f9 ;
+		overflow: hidden;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 0; /*El efecto era originalmente con max-height, lo cambie para poder alterar la altura del contenedor porque me quedaba muy pegada la sombra al texto y con margin y padding no podia alejarlo*/
+  		transition: height 0.4s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	#menu-colapsable__ul {
+		display: flex;
+		flex-direction: column;
+		
+	}
+	
+	.menu-item {
+		margin: 1rem 0;
+		font-size: 1.7rem;
+	}
+
+	/* .menu-item:nth-child(2):hover .obra-submenu-container {
+		height: 160px;
+	} */
+
+	.obra-submenu-container {
+		position: absolute;
+		top: -40px;
+		left:100px;
+		align-items: flex-end;
+		box-shadow: 0 0 0;
+	}
+
+	.obra-submenu-container li {
+		margin: 0.3rem 0;
+	}
+
+	#submenu-colapsable-btn a {
+		padding: 0 30px 0 0;
+	}
+
+	h2 {
+		font-size: 1.7rem;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;	
+		/* position: relative;
+		top: 2rem; */
+		padding: 2em 2em 15em 2em;		
+		margin: 40px 0 0 0;
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+		
+	}
+	
+	.opacar {
+		background: rgb(0 0 0 / 60%);	
+		filter: grayscale(70%);
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	p {
+		font-size: 1.5rem;
+		margin: 1rem 0;
+	}
+
+	.container-img {
+		display: flex;
+		flex-direction: column;		
+		margin: 1rem 0 0 0;
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	.gallery-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.img-galeria {
+		max-width: 100%;
+		margin: 1rem 0;
+	}
+
+	#modal__img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
+
+	.form-container__form {
+		width: 100%;
+	}
+
+	#instagram {
+		grid-column: 3/4;
+
+	}
+
+	#facebook {
+		grid-column: 2/3;
+	}
+	
+	.copyright {
+		font-size: 1.2rem;
+		grid-row: 2/3;
+		grid-column: 2/4;
+		justify-self: center;
+		margin: 0;
+	}
+	
+	.developed {	
+		margin: 0;
+		font-size: 1.1rem;
+		grid-row: 3/4;
+		grid-column: 2/4;
+		justify-self: center;
+	}
+
+	footer .fab {
+		font-size: 4rem;
+	}
+	
+	/* 	SCROLLBAR  */ 	
+
+	 html {
+		--scrollbarBG: #f8f9fa;
+		--thumbBG: #90A4AE;
+	}
+
+	html::-webkit-scrollbar {			
+		width: 11px;
+	}
+
+	html {
+		scrollbar-width: thin;
+		scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+	}
+
+	html::-webkit-scrollbar-track {
+		background: var(--scrollbarBG);
+	}
+
+	html::-webkit-scrollbar-thumb {
+		background-color: var(--thumbBG) ;
+		border-radius: 6px;
+		border: 3px solid var(--scrollbarBG);
+	}
+
+	/*------------*/
+
+	footer {
+		margin-top: 20px
+		
+	}
+
+
+	
+}
+
+/* 
+
+-------------------------- 
+
+ESTILOS TABLET
+
+--------------------------
+
+*/
+
+@media screen and (min-width: 700px) and (max-width: 993px ) { 
+
+	body {
+		padding: 0;
+		margin: 0;
+	}	
+
+	header {				
+		position:sticky;
+		background: #f9f9f9 ;
+		top: 0px;
+		z-index: 1000;		
+		box-shadow: 0 14px 20px rgb(0 0 0 / 5%),
+					0 1px 0 rgb(0 0 0 /2%);
+        transition: all 300ms ease-in-out;
+		
+	}
+
+    .animaHeaderIn{
+        transform: translateY(0px);
+      }
+      
+    .animaHeaderOut{
+    	transform: translateY(-100%);
+    }
+
+	#nav-container-mobile {		
+		padding: 0 2em;
+		font-size: 1.9rem;
+		display: flex;
+	}
+
+	#btn-hamburger {
+		display: none;
+	}
+	
+	#menu-colapsable {
+		display: flex;
+		align-items: center;
+		flex: 1 300px;
+	}
+
+
+	#menu-colapsable__ul {
+		display: flex;
+		justify-content: space-around;
+		flex-grow: 1;
+	}
+
+	.obra-submenu-container {
+		top: 57px
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		flex: 1 200px;
+	}
+	
+	a {
+		padding: 0 5px 0;
+		border-bottom: 1px solid rgb(0 0 0 / 0%);
+	}
+
+	/*chequear como hacer la transicion solomanete del text decoration sin tocar el padding*/
+	.menu-item > a:focus {
+		padding-bottom: 10px;
+		border-bottom: 1px solid rgb(0 0 0 / 10%);
+		color: rgb(175, 175, 175);		
+		transition: all 0.3s cubic-bezier(.25,.46,.45,.94);
+	}
+	
+
+	.obra-submenu-container__item:hover,
+	.obra-submenu-container__item:active {
+		color: rgb(175, 175, 175);		
+		transition: all 0.3s cubic-bezier(.25,.46,.45,.94);
+	}
+
+
+	a:active {
+		/* padding-bottom: 30px;
+		border-bottom: 1px solid rgb(71 71 71 / 0%); */
+		color: rgb(0, 0, 0);	
+		transition: all 0.1s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	
+	.container {
+		font-family: 'Source Serif Pro',sans-serif;
+		display: flex;
+		flex-direction: column;	
+		/* position: relative;
+		top: 2rem; */
+		padding: 2em 2em 15em 2em;
+		margin: 40px 0 0 0;
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+		
+	}
+
+	.container__div {
+		margin: 15px 0;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		margin: 10px 0;
+		font-size: 1.7rem;
+	}
+
+	.container-img {	
+		display: flex;
+		justify-content: center;
+	}
+
+    .gallery-container {
+        display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 10px;
+		width: 100%;
+		margin: 40px 10px;
+		justify-items: center;
+		
+    }
+
+	.img-galeria {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+    #img-1 {
+		grid-column: 1/3; 
+    }
+
+    #img-2 {
+		grid-column: 1/3; 
+    }
+				
+    #img-3 {
+		grid-column: 3/5;
+		grid-row: 1/3;
+    }
+
+    #img-4 {
+		grid-column:1/5;
+		grid-row: 3/4;
+    }
+
+    #img-5 {
+		grid-column:1/5;
+		grid-row: 4/5;
+    }
+
+	#modal__img {
+		max-width: 100%;
+		object-fit: contain;
+	}
+
+	.form-container__form {
+		width: 80%;
+	}
+
+	/* SCROLLBAR */
+
+	html {
+		--scrollbarBG: #f8f9fa;
+		--thumbBG: #90A4AE;
+	}
+
+	html::-webkit-scrollbar {			
+		width: 11px;
+	}
+
+	html {
+		scrollbar-width: thin;
+		scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+	}
+
+	html::-webkit-scrollbar-track {
+		background: var(--scrollbarBG);
+	}
+
+	html::-webkit-scrollbar-thumb {
+		background-color: var(--thumbBG) ;
+		border-radius: 6px;
+		border: 3px solid var(--scrollbarBG);
+	}
+
+	
+
+}
+
+
+/* 
+
+-------------------------- 
+
+ESTILOS DESKTOP
+
+--------------------------
+
+*/
+
+
+
+@media screen and (min-width: 993px) { 
+
+	body {
+		padding: 0;
+		margin: 0;
+	}	
+
+	header {				
+		position:sticky;
+		background: #f9f9f9 ;
+		top: 0px;
+		z-index: 1000;		
+		box-shadow: 0 14px 20px rgb(0 0 0 / 5%),
+					0 1px 0 rgb(0 0 0 /2%);
+        transition: all 300ms ease-in-out;
+		
+	}
+
+    .animaHeaderIn{
+        transform: translateY(0px);
+      }
+      
+    .animaHeaderOut{
+    	transform: translateY(-100%);
+    }
+
+	#nav-container-mobile {		
+		padding: 0 2em;
+		font-size: 1.9rem;
+		display: flex;
+	}
+
+	#btn-hamburger {
+		display: none;
+	}
+	
+	#menu-colapsable {
+		display: flex;
+		align-items: center;
+		flex: 1 600px;
+	}
+
+	h1 {
+		font-size: 4rem;
+		flex: 1 200px;
+	}
+
+	#menu-colapsable__ul {
+		display: flex;
+		justify-content: space-around;
+		flex-grow: 1;
+	}
+	
+	a {
+		padding: 0 5px 0;
+		border-bottom: 1px solid rgb(0 0 0 / 0%);
+	}
+
+	/*chequear como hacer la transicion solomanete del text decoration sin tocar el padding*/
+	.menu-item > a:hover {
+		padding-bottom: 10px;
+		border-bottom: 1px solid rgb(0 0 0 / 10%);
+		color: rgb(175, 175, 175);		
+		transition: all 0.3s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	.menu-item:nth-child(2):hover .obra-submenu-container {
+		height: 223px;
+		
+	}
+
+	.obra-submenu-container__item:hover {
+		color: rgb(175, 175, 175);		
+		transition: all 0.3s cubic-bezier(.25,.46,.45,.94);
+	}
+
+
+	a:active {
+		/* padding-bottom: 30px;
+		border-bottom: 1px solid rgb(71 71 71 / 0%); */
+		color: rgb(0, 0, 0);	
+		transition: all 0.1s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	
+	.container {
+		font-family: 'Source Serif Pro',sans-serif;
+		display: flex;
+		flex-direction: column;	
+		/* position: relative;
+		top: 2rem; */
+		padding: 2em 2em 15em 2em;
+		margin: 40px 0 0 0;
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+	
+	}
+
+	.container__div {
+		margin: 15px 0;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		margin: 10px 0;
+		font-size: 1.7rem;
+	}
+
+	.container-img {	
+		display: flex;
+		justify-content: center;
+	}
+
+    .gallery-container {
+        display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 10px;
+		width: 57vw;
+		margin: 40px 10px;
+		justify-items: center;
+		align-items: center;
+    }
+
+	.img-galeria {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+    #img-1 {
+		grid-column: 1/3; 
+    }
+
+    #img-2 {
+		grid-column: 1/3; 
+    }
+				
+    #img-3 {
+		grid-column: 3/5;
+		grid-row: 1/3;
+    }
+
+    #img-4 {
+		grid-column:1/5;
+		grid-row: 3/4;
+    }
+
+    #img-5 {
+		grid-column:1/5;
+		grid-row: 4/5;
+    }
+
+	#modal__img {
+		height: 90%;
+		object-fit: contain;
+	}
+
+	/* 
+	##contacto.html 
+	DESKTOP
+	*/
+
+	/*.form-container {
+
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		font-size:1.6rem;
+		margin-top: 50px;
+		
+	}
+	.form-container__form {
+		
+		width: 50%;
+		height: 60%;
+		
+		border-radius: 15px;
+		padding: 40px 80px;
+		box-shadow: 0 0 50px rgba(0 0 0 / 23%);
+		background-color: #f6f6f6;
+	}
+	
+	.form-container__form__input {
+		border: none;
+		display: block;
+		margin: 20px 0;
+		width: 100%;
+		padding: 10px;
+		
+		border-bottom: 1px solid #f9f9f9;
+	}
+
+	.form-container__form__input:focus-visible {
+		outline: none;
+		border-bottom: 1px solid #a5a5a5;
+		box-shadow: 5px 10px 20px rgba(0 0 0 / 15%);
+		transition: border-bottom 0.5s ease-out, box-shadow 0.5s ease-out;
+	}
+
+	#message {
+		max-width: 100%;
+		resize: none;
+		overflow: auto;
+	}
+	.form-container__form__input[type="submit"] {
+		background-color: #e4e4e4;
+	}
+	.form-container__form__input[type="submit"]:hover {
+		cursor: pointer;
+		
+		background: radial-gradient(circle, rgba(232,232,232,1) 0%, rgba(191,191,191,1) 100%);
+		transition: background 1s ease-out;
+
+	}*/
+
+	
+
+}

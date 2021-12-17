@@ -1,0 +1,305 @@
+/* 
+
+--------------------------
+
+ESTILOS COMUNES
+
+--------------------------
+
+*/
+
+* {
+	font-family: Raleway, sans-serif;
+	
+}
+
+html {
+	background: #f9f9f9;
+	font-size: 10px;
+
+}
+
+body {		
+		margin: 1em ;
+	}	
+
+h1 {		
+		font: 2.4rem Caveat, sans-serif;
+		display: inline;
+	}
+
+a:link,
+a:visited {
+
+	color: #333;
+}
+
+
+
+/* 
+
+-------------------------- 
+
+ESTILOS MOBILE
+
+--------------------------
+
+*/
+
+
+@media screen and (max-width: 576px) {
+
+	body {		
+		margin: 0 auto;
+	}	
+
+	header {		
+		box-shadow: 0 14px 20px rgb(0 0 0 / 5%);
+		height: 62.1677px;
+		position:sticky;
+		top: 0;
+		z-index: 2000;
+	}
+
+	#nav-container-mobile {
+		display: flex;	
+		position: fixed;
+		top:0;		
+		background-color: #f9f9f9;		
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		/*margin: 0 1.5em;*/
+		padding: 0 1.5rem;
+	}	
+
+
+	#btn-hamburger {
+		font-size: 2rem;
+		background: #f9f9f9;		
+		border: 1px solid rgb(0 0 0 / 15%);
+		padding: 6px 8px;
+		border-radius: 5px;
+	}
+	
+	#menu-colapsable {
+		box-shadow: inset 0 -30px 20px rgb(0 0 0 / 5%), 
+					inset 0 14px 20px rgb(0 0 0 / 5%);
+		display: flex;
+		position: absolute;
+		top: 62px;
+		left: 0;
+		z-index: 1000;		
+		width: 100%;
+		background: #f9f9f9 ;
+		overflow: hidden;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 0; /*El efecto era originalmente con max-height, lo cambie para poder alterar la altura del contenedor porque me quedaba muy pegada la sombra al texto y con margin y padding no podia alejarlo*/
+  		transition: height 0.4s cubic-bezier(.25,.46,.45,.94);
+	}
+	
+	.menu-item {
+		margin: 1rem 0;
+		font-size: 1.7rem;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;	
+		position: relative;
+		top: 2rem;
+		z-index:0;	
+		padding: 2em;		
+		margin: 0 0 0 0;
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+	}
+	
+	.opacar {
+		background: rgb(0 0 0 / 60%);	
+		filter: grayscale(70%);
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+
+	}
+
+	p {
+		font-size: 1.2rem;
+		margin: 1rem 0;
+	}
+
+	.container-img {
+
+		display: flex;
+		flex-direction: column;		
+		margin: 1rem 0 0 0;
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	.img-galeria {
+		max-width: 100%;		
+		margin: 1rem 0;
+		
+	}
+
+	.img-galeria:hover {
+		filter: drop-shadow(0px 0px 5px rgb(0 0 0 / 80%));
+
+	}
+
+	
+}
+
+/* 
+
+-------------------------- 
+
+ESTILOS TABLET
+
+--------------------------
+
+*/
+
+@media screen and (min-width: 576px) and (max-width: 992px ) { 
+
+	header {
+		background: red;
+	}
+
+
+}
+
+
+/* 
+
+-------------------------- 
+
+ESTILOS DESKTOP
+
+--------------------------
+
+*/
+
+
+
+@media screen and (min-width: 993px) { 
+
+	body {
+		padding: 0;
+		margin: 0;
+	}	
+
+	header {				
+		position:sticky;
+		background: #f9f9f9 ;
+		top: 0px;
+		z-index: 1000;		
+		box-shadow: 0 14px 20px rgb(0 0 0 / 5%),
+					0 1px 0 rgb(0 0 0 /2%);
+		
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		flex: 2 200px;
+	}
+
+	a {
+		padding: 0 5px 0;
+		border-bottom: 1px solid rgb(0 0 0 / 0%);
+	}
+
+	/*chequear como hacer la transicion solomanete del text decoration sin tocar el padding*/
+	a:hover {
+		padding-bottom: 20px;
+		border-bottom: 1px solid rgb(0 0 0 / 10%);
+		color: rgb(175, 175, 175);		
+		transition: all 0.3s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	a:active {
+		/* padding-bottom: 30px;
+		border-bottom: 1px solid rgb(71 71 71 / 0%); */
+		color: rgb(0, 0, 0);	
+		transition: all 0.1s cubic-bezier(.25,.46,.45,.94);
+	}
+
+
+	#nav-container-mobile {		
+		padding: 0 2em;
+		font-size: 1.9rem;
+		display: flex;
+	}
+
+	#btn-hamburger {
+		display: none;
+	}
+	
+	#menu-colapsable {
+		display: flex;
+		align-items: center;		
+		justify-content: space-between;
+		flex: 1 600px;
+	}
+
+	
+	.container {
+		font-family: 'Source Serif Pro',sans-serif;
+		display: flex;
+		flex-direction: column;	
+		position: relative;
+		top: 2rem;
+		padding:3.8rem;
+		z-index:0;		
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
+	}
+
+	.container__div {
+		margin: 15px 0;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		margin: 10px 0;
+		font-size: 1.7rem;
+	}
+
+	.container-img {	
+		display: flex;
+		justify-content: center;
+	}
+
+	.gallery-container {
+		display: flex;	
+		margin: 30px 0;	
+		justify-content: center;/*space-around y el resto solo sirven 
+		cuando no esta presente flex-grow: 1*/
+		width: 90vw;
+		height: 80vh;
+		flex-wrap: wrap;
+		/*grid-gap: 1px;*/
+		outline: 2px solid #383838;
+		padding: 10px;
+	}
+
+	.img-galeria {		
+		max-height: 40%; /*altura de las filas*/
+		/*min-width: 100%;*/
+		object-fit: cover;	
+		/*flex-grow: 1;*/
+		padding: 2px;
+	}
+
+
+	
+
+
+		
+
+
+
+
+}

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martín Lago</title>    
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martín Lago</title>    
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Raleway&display=swap" rel="stylesheet">
 	<!-- Estilos -->
-    <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/styles-bio.css">
 	<script src="https://kit.fontawesome.com/fafa67670d.js" crossorigin="anonymous"></script>
 </head>
 	<body>
@@ -19,13 +20,13 @@
 			<nav id="nav-container-mobile">	
 				<h1>Martín Lago</h1>                    
 				<button type="button" href="#" id="btn-hamburger"><i class="fas fa-bars colapsable"></i></button>
-				<!-- Menu Mobile -->	
+				<!-- Menu Mobile-->
 				<div id="menu-colapsable">
 					<ul id="menu-colapsable__ul">	
 						<li class="menu-item"><a href="index.html">Inicio</a></li>
 						<li class="menu-item" id="submenu-colapsable-btn"><a href="#">Trayectoria</a>
 							<ul class="obra-submenu-container">
-								<li><a href="trance-instintivo.html" class="obra-submenu-container__item">Trance<br>Instintivo</a></li>
+								<li><a href="trance-instintivo.html" class="obra-submenu-container__item">Trance Instintivo</a></li>
 								<li><a href="anacronico.html" class="obra-submenu-container__item">Anacrónico</a></li>
 								<li><a href="trampas.html" class="obra-submenu-container__item">Trampas</a></li>
 								<li><a href="magnetismo.html" class="obra-submenu-container__item">Magnetismo</a></li>
@@ -38,26 +39,34 @@
 			</nav>
 		</header>
 		<main class="container">
-			<h2>Formulario de contacto</h2>
-			<div class="form-container">
-				<form class="form-container__form" method="GET">
-					<label for="name">Nombre: </label>
-					<input id="name" class="form-container__form__input" type="text" placeholder="Roman">
-					<label for="e-mail">E-mail: </label>
-					<input id="e-mail" class="form-container__form__input" type="email" placeholder="roman@server.com" required>
-					<label for="subjet">Asunto: </label>
-					<input id="subject" class="form-container__form__input" type="text" placeholder="Invitación">
-					<label for="message">Mensaje: </label>
-					<textarea name="message" id="message" cols="30" rows="10" class="form-container__form__input" placeholder="Hola!, quería invitarte al evento..."></textarea>
-					<button type="submit" class="form-container__form__input"><b>Enviar</b></button>
-				</form>
-			</div>
+      <h2 id="title-bio">Bio</h2>
+			<article class="bio-container">        
+        <img src="./img/bio.jpg" alt="Retrato de Martin Lago" id="img-bio">
+        <p id="ubicacion-texto"><b>Martín Lago (Buenos Aires, Argentina, 1984)</b></p>       
+        <p class="contenido-bio">
+          Artista argentino interesado en el desarrollo continuo de representaciones analíticas, que conllevan a investigaciones técnicas, sobre la luz y la forma. Explorando lenguajes y los signos que las dominan, sobre las dicotomías que conforman el arte como unidad. En el 2010 el artista comenzó un estudio sobre interpretación de una voluntad intuitiva que pulsa la libertad de formar espacios mediante la combinación de tonos y colores dispuestos espontáneamente. Dejando de manifiesto la intuición como vehículo para unir las energías que proyectan entre si los colores, casi sin formas; solo direcciones y momentos reflejados. Esta serie resulto en el registro de una profunda experimentación emocional llamada "Trance Instintivo", la cual se expuso en Diciembre del 2013 en el Centro Cultural Sabato.
+        </p>
+        <br>
+        <p class="contenido-bio">
+          A principios del 2015 la intuición se convierte en la herramienta, que se deja delimitar para conformar un juego dentro de un campo condicionado por la necesidad de torcer las nociones de espacio/objeto. Registrado en una basta serie llamada "Magnetismo", encontró su fin en el 2017.
+        </p>
+        <br>
+        <p class="contenido-bio">
+          La comprensión de los conceptos que contiene una forma, se vuelven un lenguaje, que enlaza lógicas/figuras. Formando así un relato visual sobre lo conocido. Entre el 2018 y 2019 esta serie tomo el nombre de "Trampas", como la forma en que las imágenes se vuelven una idea, de la cual solo se puede ver la superficie.
+        </p>
+        <br>
+        <br>
+        <p class="contenido-bio"><b>Educación</b></p>
+        <br>
+        <p class="contenido-bio">2009 - 2013: Instituto Universitario Nacional de las Artes (IUNA)</p>
+        <p class="contenido-bio">2015 - 2019: Asociación Estimulo de Bellas Artes</p>
+      </article> 
 		</main>
 		<footer>			
 			<p class="copyright">Martin Lago&copy. Todos los derechos reservados.</p>		
 			<a href="#" id="facebook"><i class="fab fa-facebook-square"></i></a>
 			<a href="https://www.instagram.com/lago.martin/?hl=es" id="instagram"><i class="fab fa-instagram"></i></a>			
-			<a class="developed" href="mailto:romandescotte@gmail.com">Desarrollado por randomContent 2021</a>			
+			<a class="developed" href="https://github.com/romandescotte">Desarrollado por Roman Descotte 2022</a>			
 		</footer>
 		<script src="./js/app.js" type="text/javascript"></script>
 		<script src="./js/validar.js" type="text/javascript"></script>

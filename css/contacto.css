@@ -1,0 +1,54 @@
+p {
+  margin: 0 0 50px 0; 
+}
+
+#contact-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+#facebook-contact {
+  font-size: 160px
+}
+
+#instagram-contact {
+  font-size: 160px
+}
+
+#linktree-contact {
+  height: 170px;
+}
+
+@media screen and (max-width: 700px) {
+
+  #facebook-contact {
+    font-size: 55px
+  }
+  
+  #instagram-contact {
+    font-size: 55px
+  }
+  
+  #linktree-contact {
+    height: 60px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 993px ) { 
+  #facebook-contact {
+    font-size: 90px
+  }
+  
+  #instagram-contact {
+    font-size: 90px
+  }
+  
+  #linktree-contact {
+    height: 100px;
+ 
+}
+
+

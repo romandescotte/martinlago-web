@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martín Lago</title>    
-    <!-- Fuentes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martín Lago</title>    
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Raleway&display=swap" rel="stylesheet">
 	<!-- Estilos -->
-    <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/contacto.css">
 	<script src="https://kit.fontawesome.com/fafa67670d.js" crossorigin="anonymous"></script>
 </head>
 	<body>
@@ -38,24 +39,16 @@
 			</nav>
 		</header>
 		<main class="container">
-			<h2>Formulario de contacto</h2>
-			<div class="form-container">
-				<form class="form-container__form" method="GET">
-					<label for="name">Nombre: </label>
-					<input id="name" class="form-container__form__input" type="text" placeholder="Roman">
-					<label for="e-mail">E-mail: </label>
-					<input id="e-mail" class="form-container__form__input" type="email" placeholder="roman@server.com" required>
-					<label for="subjet">Asunto: </label>
-					<input id="subject" class="form-container__form__input" type="text" placeholder="Invitación">
-					<label for="message">Mensaje: </label>
-					<textarea name="message" id="message" cols="30" rows="10" class="form-container__form__input" placeholder="Hola!, quería invitarte al evento..."></textarea>
-					<button type="submit" class="form-container__form__input"><b>Enviar</b></button>
-				</form>
-			</div>
+			<p>Te podés contactar a través de los siguientes medios: </p>
+      <div id="contact-container">
+        <a href="https://www.facebook.com/people/Martin-Lago/100067295522413/" id="facebook-contact"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/lago.martin/?hl=es" id="instagram-contact"><i class="fab fa-instagram"></i></a>
+        <a href="https://linktr.ee/martinlago"><img src="./img/linktree.png" id="linktree-contact" alt="Linktree logo"></a>
+      </div>			
 		</main>
 		<footer>			
 			<p class="copyright">Martin Lago&copy. Todos los derechos reservados.</p>		
-			<a href="#" id="facebook"><i class="fab fa-facebook-square"></i></a>
+			<a href="https://www.facebook.com/people/Martin-Lago/100067295522413/" id="facebook"><i class="fab fa-facebook-square"></i></a>
 			<a href="https://www.instagram.com/lago.martin/?hl=es" id="instagram"><i class="fab fa-instagram"></i></a>			
 			<a class="developed" href="https://github.com/romandescotte">Desarrollado por Roman Descotte 2022</a>			
 		</footer>

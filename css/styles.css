@@ -9,46 +9,39 @@ ESTILOS COMUNES
 */
 
 * {
-	font-family: Raleway, sans-serif;
-	
+	font-family: Raleway, sans-serif;	
 }
 
 html {
 	background: #f9f9f9;
 	font-size: 10px;
-
 }
 
 body {		
-		margin: 1em ;
-		position: relative;
-		min-height: 100vh;
-		 	
-	}	
+  margin: 1em ;
+  position: relative;
+  min-height: 100vh;		 	
+}	
 
 h1 {		
-		font: 3rem Caveat, sans-serif;
-		display: inline;
-	}
+  font: 3rem Caveat, sans-serif;
+  display: inline;
+}
 
 a:link,
 a:visited {
-
 	color: #333;
 }
-
  
 .img-galeria:hover {
-    filter: drop-shadow(0px 0px 15px rgb(0 0 0 / 100%)) grayscale(50%);
-    transition: filter 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);    
-    cursor: pointer;   
+  filter: drop-shadow(0px 0px 15px rgb(0 0 0 / 100%)) grayscale(50%);
+  transition: filter 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);    
+  cursor: pointer;   
 }
 
 .menu-item:nth-child(2) {
 	position: relative;
 }
-
-
 
 .obra-submenu-container {
 	display: flex ;
@@ -101,7 +94,7 @@ MODAL IMG
 #modal__img, #modal__epigrafe {
 	animation-name: zoom;
 	animation-duration: 0.3s;
-	}
+}
 
 @keyframes zoom {
 	from {transform:scale(0)}
@@ -123,7 +116,6 @@ MODAL IMG
 	color: #bbb;
 	text-decoration: none;
 	cursor: pointer;
-
 }
 
 .vertical {
@@ -162,14 +154,12 @@ footer .fab {
 
 .copyright {
 	margin: 10px 10px;
-	font-size: 1.3rem;
-	
+	font-size: 1.3rem;	
 }
 
 .developed {	
 	margin: 10px 10px;
-	font-size: 1.3rem;
-	
+	font-size: 1.3rem;	
 }
 
 /* 
@@ -216,15 +206,15 @@ DESKTOP
 	resize: none;
 	overflow: auto;
 }
+
 .form-container__form__input[type="submit"] {
 	background-color: #e4e4e4;
 }
+
 .form-container__form__input[type="submit"]:hover {
-	cursor: pointer;
-	
+	cursor: pointer;	
 	background: radial-gradient(circle, rgba(232,232,232,1) 0%, rgba(191,191,191,1) 100%);
 	transition: background 1s ease-out;
-
 }
 
 .invalid {
@@ -300,11 +290,13 @@ ESTILOS MOBILE
 		align-items: center;
 		justify-content: center;
 		height: 0; /*El efecto era originalmente con max-height, lo cambie para poder alterar la altura del contenedor porque me quedaba muy pegada la sombra al texto y con margin y padding no podia alejarlo*/
-  		transition: height 0.4s cubic-bezier(.25,.46,.45,.94);
+    transition: height 0.4s cubic-bezier(.25,.46,.45,.94);
 	}
 
-	#menu-colapsable__ul {
+	#menu-colapsable__ul {   
 		display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 		flex-direction: column;		
     height: 100%;
 	}
@@ -327,7 +319,7 @@ ESTILOS MOBILE
 	}
 
 	#submenu-colapsable-btn a {
-		padding: 0 30px 0 0;
+		padding: 0;
 	}
 
 	h2 {
@@ -445,15 +437,16 @@ ESTILOS MOBILE
 		border: 3px solid var(--scrollbarBG);
 	}
 
+  .obra-submenu-container.alto-200 li:first-child {    
+    text-align: end;
+  }
+
 	/*------------*/
 
 	footer {
 		margin-top: 20px
 		
-	}
-
-
-	
+	}	
 }
 
 /* 
@@ -479,8 +472,8 @@ ESTILOS TABLET
 		top: 0px;
 		z-index: 1000;		
 		box-shadow: 0 14px 20px rgb(0 0 0 / 5%),
-					0 1px 0 rgb(0 0 0 /2%);
-        transition: all 300ms ease-in-out;
+					      0 1px 0 rgb(0 0 0 /2%);
+    transition: all 300ms ease-in-out;
 		
 	}
 
@@ -535,8 +528,7 @@ ESTILOS TABLET
 		border-bottom: 1px solid rgb(0 0 0 / 10%);
 		color: rgb(175, 175, 175);		
 		transition: all 0.3s cubic-bezier(.25,.46,.45,.94);
-	}
-	
+	}	
 
 	.obra-submenu-container__item:hover,
 	.obra-submenu-container__item:active {
@@ -552,7 +544,6 @@ ESTILOS TABLET
 		transition: all 0.1s cubic-bezier(.25,.46,.45,.94);
 	}
 
-	
 	.container {
 		font-family: 'Source Serif Pro',sans-serif;
 		display: flex;
@@ -561,8 +552,7 @@ ESTILOS TABLET
 		top: 2rem; */
 		padding: 2em 2em 15em 2em;
 		margin: 40px 0 0 0;
-		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);
-		
+		transition: background 0.4s cubic-bezier(.25,.46,.45,.94);		
 	}
 
 	.container__div {
@@ -660,8 +650,7 @@ ESTILOS TABLET
 		font-size: 1.1rem;
 		grid-row: 3/4;
 		grid-column: 1/17;
-		justify-self: center;
-		
+		justify-self: center;		
 	}
 
 
@@ -690,9 +679,10 @@ ESTILOS TABLET
 		border-radius: 6px;
 		border: 3px solid var(--scrollbarBG);
 	}
-
-	
-
+  
+  .obra-submenu-container.alto-200 li:first-child {   
+    text-align: center;  }
+  
 }
 
 
@@ -727,8 +717,8 @@ ESTILOS DESKTOP
 	}
 
   .animaHeaderIn{
-      transform: translateY(0px);
-    }
+    transform: translateY(0px);
+  }
     
   .animaHeaderOut{
     transform: translateY(-100%);
@@ -800,9 +790,7 @@ ESTILOS DESKTOP
 		transition: all 0.3s cubic-bezier(.25,.46,.45,.94);
 	}
 
-	a:active {
-		/* padding-bottom: 30px;
-		border-bottom: 1px solid rgb(71 71 71 / 0%); */
+	a:active {		
 		color: rgb(0, 0, 0);	
 		transition: all 0.1s cubic-bezier(.25,.46,.45,.94);
 	}
@@ -838,15 +826,15 @@ ESTILOS DESKTOP
 		justify-content: center;
 	}
 
-    .gallery-container {
-        display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 10px;
-		width: 45vw;
-		margin: 40px 10px;
-		justify-items: center;
-		align-items: center;
-    }
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    /* width: 45vw; */
+    margin: 40px 10px;
+    justify-items: center;
+    align-items: center;
+  }
 
 	.img-galeria {
 		width: 100%;
@@ -854,28 +842,28 @@ ESTILOS DESKTOP
 		object-fit: cover;
 	}
 	
-    #img-1 {
-		grid-column: 1/3; 
-    }
+  #img-1 {
+    grid-column: 1/3; 
+  }
 
-    #img-2 {
-		grid-column: 1/3; 
-    }
-				
-    #img-3 {
-		grid-column: 3/5;
-		grid-row: 1/3;
-    }
+  #img-2 {
+    grid-column: 1/3; 
+  }
+      
+  #img-3 {
+    grid-column: 3/5;
+    grid-row: 1/3;
+  }
 
-    #img-4 {
-		grid-column:1/5;
-		grid-row: 3/4;
-    }
+  #img-4 {
+    grid-column:1/5;
+    grid-row: 3/4;
+  }
 
-    #img-5 {
-		grid-column:1/5;
-		grid-row: 4/5;
-    }
+  #img-5 {
+    grid-column:1/5;
+    grid-row: 4/5;
+  }
 
 	#modal__img {
 		height: 90%;
@@ -888,7 +876,6 @@ ESTILOS DESKTOP
 
 	#instagram {
 		grid-column: 7/9;
-
 	}
 
 	#facebook {
@@ -910,68 +897,6 @@ ESTILOS DESKTOP
 		font-size: 1.2rem;
 		grid-row: 1/2;
 		grid-column: 10/12;
-		justify-self: center;
-		
+		justify-self: center;		
 	}
-
-	/* 
-	##contacto.html 
-	DESKTOP
-	*/
-
-	/*.form-container {
-
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		font-size:1.6rem;
-		margin-top: 50px;
-		
-	}
-	.form-container__form {
-		
-		width: 50%;
-		height: 60%;
-		
-		border-radius: 15px;
-		padding: 40px 80px;
-		box-shadow: 0 0 50px rgba(0 0 0 / 23%);
-		background-color: #f6f6f6;
-	}
-	
-	.form-container__form__input {
-		border: none;
-		display: block;
-		margin: 20px 0;
-		width: 100%;
-		padding: 10px;
-		
-		border-bottom: 1px solid #f9f9f9;
-	}
-
-	.form-container__form__input:focus-visible {
-		outline: none;
-		border-bottom: 1px solid #a5a5a5;
-		box-shadow: 5px 10px 20px rgba(0 0 0 / 15%);
-		transition: border-bottom 0.5s ease-out, box-shadow 0.5s ease-out;
-	}
-
-	#message {
-		max-width: 100%;
-		resize: none;
-		overflow: auto;
-	}
-	.form-container__form__input[type="submit"] {
-		background-color: #e4e4e4;
-	}
-	.form-container__form__input[type="submit"]:hover {
-		cursor: pointer;
-		
-		background: radial-gradient(circle, rgba(232,232,232,1) 0%, rgba(191,191,191,1) 100%);
-		transition: background 1s ease-out;
-
-	}*/
-
-	
-
 }

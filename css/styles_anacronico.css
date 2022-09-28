@@ -1,7 +1,0 @@
-/*Sobreescribe los estilos de la galería de imágenes*/
-.gallery-container {
-   
-	grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-	gap: 10px;	
-	justify-items: center;
-}

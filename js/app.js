@@ -1,29 +1,26 @@
 'use strict'
 
-console.log("js conectado");
-
-
 // Despliega menu colapsable en mobile
 
 let $flexMenuHamburger = document.getElementById("menu-colapsable");
 let $btnColapsable = document.querySelector(".colapsable");
 let $mobileContainer = document.querySelector(".container");
 let $footer = document.querySelector("footer");
+let $body = document.querySelector("body");
 
-$btnColapsable.addEventListener("click", function() {
-    
-    if ($flexMenuHamburger.style.height){
-        $flexMenuHamburger.style.height = null;
-      } else {
-        $flexMenuHamburger.style.height = $flexMenuHamburger.scrollHeight + 220 + "px";
-    };
-    	 $mobileContainer.classList.toggle("opacar");
-		 $footer.classList.toggle("opacar");
-	
-    // $flexMenuHamburger.style.top = window.scrollY + 62 + "px";
+$btnColapsable.addEventListener("click", function() {    
+    if ($flexMenuHamburger.style.height) {
+      $flexMenuHamburger.style.height = null;
+    } else {
+      // $flexMenuHamburger.style.height = $flexMenuHamburger.scrollHeight + 220 + "px";
+      $flexMenuHamburger.style.height = 60 + "vh";
+    }
+    // $mobileContainer.classList.toggle("opacar");
+		$footer.classList.toggle("opacar");	    
+    $footer.classList.toggle("no-border-top");
+    $body.classList.toggle("opacar");
+
 });
-
-
 
 // Convierte a b&n imagenes al hacer click
 
@@ -33,11 +30,8 @@ $btnColapsable.addEventListener("click", function() {
 		for(let i=0; i <= $imgGaleria.length; i++) {
 			$imgGaleria.classList.toggle("opacar");
 		}  
-	}
-	
+	}	
 });
-
-
 
 // Cancela click derecho en imagenes
 //investigar alguna manera de que no quede el loop ahi en esparcido 
@@ -49,8 +43,6 @@ for(let i=0; i< $imgGaleria2.length; i++ ) {
 	}, false);
 }
 
-
-
 //Oculta menu de navegacion superior al scrollear
 
 /*Lo saqué de aca: https://www.sitepoint.com/animated-sticky-navigation-menu-javascript/*/ 
@@ -61,25 +53,24 @@ for(let i=0; i< $imgGaleria2.length; i++ ) {
 
 	const handler = () => {
 		const newOffset = window.scrollY || window.pageYOffset;
-
-		if (newOffset > alturaHeader) {
-		if (newOffset > refOffset) {
-			$header.classList.remove('animaHeaderIn');
-			$header.classList.add('animaHeaderOut');
-		} else {
-			$header.classList.remove('animaHeaderOut');
-			$header.classList.add('animaHeaderIn');
-		}
-		$header.style.background = '#f9f9f9c4';
-		refOffset = newOffset;
-		} else {
-		$header.style.backgroundColor = '#f9f9f9';
-		}
+    if(window.innerWidth > 700) {
+      if (newOffset > alturaHeader) {
+        if (newOffset > refOffset) {
+          $header.classList.remove('animaHeaderIn');
+          $header.classList.add('animaHeaderOut');
+        } else {
+          $header.classList.remove('animaHeaderOut');
+          $header.classList.add('animaHeaderIn');
+        }
+        $header.style.background = '#f9f9f9c4';
+        refOffset = newOffset;
+      } else {
+        $header.style.backgroundColor = '#f9f9f9';
+      }
+    }		
 	};
 	window.addEventListener('scroll', handler, false);
 })();
-  
-
 
 // Abre modal al hacer click en imaganes
 
@@ -90,7 +81,6 @@ for(let i = 0; i < $img.length; i++ ) {
 	$img[i].addEventListener("click" , function () {
 		$modal.style.display = "flex";
 		$modalImg.src = this.src;
-
 	});
 	if($img[i].style.height > 100) {
 		//$modalImg.classList.add("vertical")
@@ -118,11 +108,9 @@ let $obraSubmenuContainer = document.querySelector(".obra-submenu-container");
 $submenuColapsableBtn.addEventListener("click", function() {
 	if(window.innerWidth < 576){
 		$obraSubmenuContainer.classList.toggle("alto-160");
-
 	} else if (window.innerWidth < 992) {
 		$obraSubmenuContainer.classList.toggle("alto-200");
-	}
-	
+	}	
 })
 
 
